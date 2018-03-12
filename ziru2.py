@@ -44,7 +44,7 @@ def get_answer():
 def duanxin():
     appkey = 'b9d5501c95ec06b652dcdc7df5956818' #您申请的短信服务appkey
     mobile = '13051168119' #短信接受者的手机号码
-    tpl_id = '66349' #申请的短信模板ID,根据实际情况修改 
+    tpl_id = '66353' #申请的短信模板ID,根据实际情况修改 
 
     sendsms(appkey, mobile, tpl_id) #请求发送短信
  
