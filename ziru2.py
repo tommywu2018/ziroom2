@@ -29,7 +29,7 @@ headers0 = {
 
 
 def get_answer():
-    resp = requests.get('http://phoenix.ziroom.com/v7/room/detail.json?network=4G&sign_open=1&app_version=5.4.5&house_id=17512&sign=c879a011deba72d7559a65d4d964938f&imei=861365031181741&id=127033&ip=&uid=0&timestamp=1520475675&city_code=110000&os=android%3A5.0.2&model=Redmi+Note+3%20HTTP/1.1',headers=headers0,timeout=5).json()
+    resp = requests.get('http://phoenix.ziroom.com/v7/room/detail.json?network=4G&sign_open=1&app_version=5.4.5&house_id=26046&sign=4ee275311873a7f045bf4b489fa62126&imei=861365031181741&id=180958&ip=&uid=0&timestamp=1520815932&city_code=110000&os=android%3A5.0.2&model=Redmi+Note+3 HTTP/1.1',headers=headers0,timeout=5).json()
     resp_dict = resp
     resp_dict = eval(str(resp))
     if resp_dict['status'] == 'success':
@@ -37,19 +37,14 @@ def get_answer():
             print('room is waiting...')
         else:
             duanxin()
-
-def sendanswer(answer):
-    msg=str(answer)
-    Sender(receivers='吴震',port=10003).send(msg)
+            time.sleep(15+random.random())
 
 
-
- 
 
 def duanxin():
-    appkey = '0f738ef0d6781df87206a3969ad86d4a' #您申请的短信服务appkey
-    mobile = '13240114245' #短信接受者的手机号码
-    tpl_id = '66137' #申请的短信模板ID,根据实际情况修改 
+    appkey = 'b9d5501c95ec06b652dcdc7df5956818' #您申请的短信服务appkey
+    mobile = '13051168119' #短信接受者的手机号码
+    tpl_id = '66349' #申请的短信模板ID,根据实际情况修改 
 
     sendsms(appkey, mobile, tpl_id) #请求发送短信
  
